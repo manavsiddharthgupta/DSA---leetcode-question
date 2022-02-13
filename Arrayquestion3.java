@@ -8,27 +8,27 @@ public class Arrayquestion3 {
         System.out.println(groupThePeople(groupsizes));
     }
     public static List<List<Integer>> groupThePeople(int[] groupSizes){
-        List<List<Integer>> answer = new ArrayList<>();
-        for (int i = 0; i < groupSizes.length; i++) {
-            if (groupSizes[i] == 0) {
+        List<List<Integer>> answer = new ArrayList<>(); // create list of list for grouping the people 
+        for (int i = 0; i < groupSizes.length; i++) {        
+            if (groupSizes[i] == 0) {                    // check if people have already grouped. grouped people have value 0.
                 continue;
-            } else {
-                List<Integer> group = new ArrayList<>();
-            int count = groupSizes[i];
-            int j = 0;
-            while (count > 0) {
-                if (groupSizes[i] == groupSizes[j]) {
+            } else {                                        // else now we will create a list to group people. 
+                List<Integer> group = new ArrayList<>();   // create a list for group of same size 
+            int count = groupSizes[i];                     // count total number of people can be in list
+            int j = 0;                   
+            while (count > 0) {                                  // we will traverse until we found total number of people that can be in group of same size.
+                if (groupSizes[i] == groupSizes[j]) {      
                     group.add(j);
                     count--;
                 }
                 j++;
             }
-            j = 0;
+            j = 0;                // now we will make every person value zeo those who have been grouped
             while (j < group.size()) {
                 groupSizes[group.get(j)] = 0;
                 j++;
             }
-            answer.add(group);
+            answer.add(group);           // every list(group) should be added in answer list
             }
             
         }
