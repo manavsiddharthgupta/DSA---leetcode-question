@@ -8,11 +8,11 @@ public class Arraysquestion4 {
         System.out.println(max);
     }
     public static int maxWidthOfVerticalArea(int[][] points) {
-        int[] allwidth = new int[points.length];
+        int[] allwidth = new int[points.length];  // create an array that will contains all width points.
         for (int i = 0; i < points.length; i++) {
             allwidth[i] = points[i][0];
         }
-        Arrays.sort(allwidth);
+        Arrays.sort(allwidth);   // sort the array anf find max difference between two adjacent index.
         System.out.println(Arrays.toString(allwidth));
         int max = 0;
         for (int i = 1; i < allwidth.length; i++) {
@@ -21,6 +21,6 @@ public class Arraysquestion4 {
             }
         }
 
-        return max;
+        return max;   // finally return the max.
     }
 }

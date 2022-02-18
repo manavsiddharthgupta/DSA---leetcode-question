@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 
 public class Arrayquestion5 {
+    //2125. Number of Laser Beams in a Bank --- leetcode
     public static void main(String[] args) {
         String[] bank = {"011101","100110","010100","001000"};
         System.out.println(numberOfBeams(bank));
     }
     public static int numberOfBeams(String[] bank) {
-        ArrayList<Integer> device = new ArrayList<>();
+        ArrayList<Integer> device = new ArrayList<>();    
         for (int i = 0; i < bank.length; i++) {
             int count = 0;
             int j = 0;
