@@ -1,4 +1,5 @@
 public class Arraysquestion7 {
+    //2023. Number of Pairs of Strings With Concatenation Equal to Target----leetcode
     public static void main(String[] args) {
         String[] nums = {"1","1","1"};
         String target = "11";
